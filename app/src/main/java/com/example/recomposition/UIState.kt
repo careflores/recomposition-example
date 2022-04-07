@@ -29,7 +29,7 @@ fun UIState(viewModel: MainViewModel) {
     MainScaffold(
         state,
         onValueUpdate = { viewModel.updateSlider(it.roundToInt()) },
-        onButtonClick = { viewModel.updateCounter() }
+        onButtonClick = viewModel::updateCounter
     )
 }
 
