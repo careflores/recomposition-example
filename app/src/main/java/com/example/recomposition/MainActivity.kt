@@ -5,10 +5,13 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import com.example.recomposition.ui.theme.RecompositionTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,6 +26,9 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Text(text = "Flatten hierarchy")
                     FlattenHierarchy()
+                    Spacer(modifier = Modifier.height(24.dp))
+                    Text(text = "Nested hierarchy")
+                    NestedHierarchy()
                 }
             }
         }
